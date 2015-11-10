@@ -1,8 +1,18 @@
 {
+    "name": "com-phonegap-bossbolo-plugin",
     "version": "1.0.0",
-    "name": "cz.blocshop.socketsforcordova",
-    "cordova_name": "SocketsForCordova",
     "description": "布络socket通讯基础框架.",
+    "cordova": {
+        "id": "com-phonegap-bossbolo-plugin",
+        "platforms": [
+            "android",
+            "ios"
+        ]
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ulee77/com-phonegap-bossbolo-plugin-socket"
+    },
     "keywords": [
         "cordova",
         "phonegap",
@@ -17,10 +27,6 @@
         "cordova-android",
         "cordova-ios"
     ],
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/ulee77/com-phonegap-bossbolo-plugin-socket"
-    },
     "platforms": [
         "android",
         "ios"

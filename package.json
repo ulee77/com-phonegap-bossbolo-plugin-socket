@@ -27,10 +27,6 @@
         "cordova-android",
         "cordova-ios"
     ],
-    "platforms": [
-        "android",
-        "ios"
-    ],
     "engines": [
         {
             "name": "cordova",

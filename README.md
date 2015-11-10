@@ -1,15 +1,17 @@
-# com-phonegap-bossbolo-plugin
-布络phonegap插件库
-
+# com-phonegap-bossbolo-plugin-socket
+布络phonegap socket插件
 
 ## 安装插件
 ```sh
-phonegap plugin add com-phonegap-bossbolo-plugin
+phonegap plugin add com-phonegap-bossbolo-plugin-socket
 ```
 或
 ```sh
-phonegap plugin add https://github.com/ulee77/com-phonegap-bossbolo-plugin.git
+phonegap plugin add https://github.com/ulee77/com-phonegap-bossbolo-plugin-socket.git
 ```
+
+##插件依赖
+依赖于主框架插件：https://github.com/ulee77/com-phonegap-bossbolo-plugin
 
 ##平台支持
 - phoengap 5+
@@ -18,46 +20,56 @@ phonegap plugin add https://github.com/ulee77/com-phonegap-bossbolo-plugin.git
 
 ##通用接口说明
 
-退出应用:
+创建一个新的socket对象:
 ```sh
-window.BoloPlugin.exitApp();
+var socket = new Socket();
 ```
 
-获取应用设备唯一标识
+设置socket消息回调
 ```sh
-var callback = function(deviceTocken){
-    console.log(deviceTocken);//deviceTocken唯一标识字符串
-}
-window.BoloPlugin.getDeviceToken(callback);
+socket.onData = function(receive) {
+  // 得到服务器receive，receive为字符串
+};
+socket.onError = function(errorMessage) {
+  // 当socket发生错误时触发，并得到错误信息
+};
+socket.onClose = function(hasError) {
+  // 当socket关闭触发
+};
 ```
 
-检查版本,需集成友盟自动更新插件(仅支持Android),有更新则自动弹出更新提示框。
+打开连接
 ```sh
-var callback = function(newVersion){
-    console.log(newVersion);//newVersion: true or false
-}
-window.BoloPlugin.checkVersion(callback);
-```
-获取 本次载入主页时在本次应用启动生命周期内是否已被载入过，通常与appReload配合使用，判断是否需要自动登录。
-```sh
-var callback = function(result){
-    console.log(result);//result：默认为0，定义为首次载入；获取值依setLoaded()方法设置值而定
-}
-window.BoloPlugin.getLoaded(callback);
+socket.open(
+  "8.8.8.8",    //IP
+  1234,         //端口
+  function() {
+    // 打开成功时触发
+  },
+  function(errorMessage) {
+    // 打开失败时触发
+  });
 ```
 
-设置载入值
+向服务器发送消息
 ```sh
-window.BoloPlugin.setLoaded(1);
+socket.write(data);
 ```
 
-//重载应用，即页面完全刷新
+发送并关闭通讯通道
 ```sh
-window.BoloPlugin.appReload();
+socket.shutdownWrite();
 ```
 
-卸载指定包名应用(仅支持Android)
+关闭socket连接
 ```sh
-window.BoloPlugin.uninstallBPP(pageName); //pageName为指定包名，若不传值则检查默认包名
+socket.close();
 ```
+
+###socket状态
+通过调用Socket.State可以获取socket当前连接状态，状态值如下：
+- `Socket.State.CLOSED`
+- `Socket.State.OPENING`
+- `Socket.State.OPENED`
+- `Socket.State.CLOSING`
 

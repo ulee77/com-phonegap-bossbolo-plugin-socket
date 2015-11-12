@@ -16,7 +16,7 @@
     </engines>
 
     <!-- 设置依赖插件,或者绑定其他插件  id:plugin id -->
-     <dependency id="com-phonegap-bossbolo-plugin" />
+     <!-- <dependency id="com-phonegap-bossbolo-plugin" /> -->
 
     <js-module src="www/socket.js" name="Socket">
         <clobbers target="window.Socket" />

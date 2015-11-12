@@ -4,14 +4,16 @@
         xmlns:rim="http://www.blackberry.com/ns/widgets"
         xmlns:android="http://schemas.android.com/apk/res/android"
         id="com-phonegap-bossbolo-plugin-socket"
-        version="1.1.0">
+        version="1.0.1">
     <name>BoloSocekt</name>
     <description>
-		This Cordova plugin provides JavaScript API, that allows you to communicate with server through TCP protocol.
-		Currently we support these platforms: iOS, Android, WP8.
+		socket通讯框架
 	</description>
     <license>Apache 2.0</license>
     <keywords>socket,sockets,network,tcp,cordova,bossbolo</keywords>
+    <engines>
+        <engine name="cordova" version=">=3.0.0" />
+    </engines>
 
     <!-- 设置依赖插件,或者绑定其他插件  id:plugin id -->
      <dependency id="com-phonegap-bossbolo-plugin" />

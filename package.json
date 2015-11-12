@@ -8,6 +8,10 @@
             "android"
         ]
     },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ulee77/com-phonegap-bossbolo-plugin-socket.git"
+    },
     "keywords": [
         "cordova",
         "phonegap",
@@ -21,13 +25,6 @@
         "ecosystem:cordova",
         "cordova-android",
         "cordova-ios"
-    ],
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/ulee77/com-phonegap-bossbolo-plugin-socket"
-    },
-    "platforms": [
-        "android"
     ],
     "engines": [
         {

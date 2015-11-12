@@ -32,14 +32,14 @@
 		<config-file target="AndroidManifest.xml" parent="/manifest">
             <uses-permission android:name="android.permission.INTERNET" />
         </config-file>  
-		<source-file src="src/android/Logging.java" target-dir="com/phonegap/bossbolo/plugin/socket" />
-        <source-file src="src/android/Consumer.java" target-dir="com/phonegap/bossbolo/plugin/socket" />
-		<source-file src="src/android/SocketAdapter.java" target-dir="com/phonegap/bossbolo/plugin/socket" />
-		<source-file src="src/android/SocketAdapterImpl.java" target-dir="com/phonegap/bossbolo/plugin/socket" />
-		<source-file src="src/android/SocketAdapterOptions.java" target-dir="com/phonegap/bossbolo/plugin/socket" />
-		<source-file src="src/android/SocketPlugin.java" target-dir="com/phonegap/bossbolo/plugin/socket" />
-		<source-file src="src/android/MessageCodec.java" target-dir="com/phonegap/bossbolo/plugin/socket" />
-		<source-file src="src/android/MyZip.java" target-dir="com/phonegap/bossbolo/plugin/socket" />
+		<source-file src="src/android/Logging.java" target-dir="src/com/phonegap/bossbolo/plugin/socket" />
+        <source-file src="src/android/Consumer.java" target-dir="src/com/phonegap/bossbolo/plugin/socket" />
+		<source-file src="src/android/SocketAdapter.java" target-dir="src/com/phonegap/bossbolo/plugin/socket" />
+		<source-file src="src/android/SocketAdapterImpl.java" target-dir="src/com/phonegap/bossbolo/plugin/socket" />
+		<source-file src="src/android/SocketAdapterOptions.java" target-dir="src/com/phonegap/bossbolo/plugin/socket" />
+		<source-file src="src/android/SocketPlugin.java" target-dir="src/com/phonegap/bossbolo/plugin/socket" />
+		<source-file src="src/android/MessageCodec.java" target-dir="src/com/phonegap/bossbolo/plugin/socket" />
+		<source-file src="src/android/MyZip.java" target-dir="src/com/phonegap/bossbolo/plugin/socket" />
 
     </platform>
     

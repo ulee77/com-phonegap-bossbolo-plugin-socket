@@ -1,13 +1,13 @@
 # com-phonegap-bossbolo-plugin-socket
 布络phonegap socket插件
 
-## 安装插件
-```sh
-phonegap plugin add com-phonegap-bossbolo-plugin-socket
-```
-或
+## 插件的安装/卸载
 ```sh
 phonegap plugin add https://github.com/ulee77/com-phonegap-bossbolo-plugin-socket.git
+```
+卸载命令
+```sh
+phonegap plugin rm com-phonegap-bossbolo-plugin-socket
 ```
 
 ##插件依赖

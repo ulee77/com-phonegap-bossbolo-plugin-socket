@@ -8,8 +8,6 @@ import java.nio.charset.CharsetDecoder;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import com.bossbolo.powerb.MyZip;
-
 public class MessageCodec {
 	static public byte[]  encode(JSONObject json){
 		ByteBuffer buffer = null;

@@ -1,7 +1,7 @@
 var exec = require('cordova/exec');
 
 var SOCKET_EVENT = "SOCKET_EVENT";
-var CORDOVA_SERVICE_NAME = "BoloSocekt";
+var CORDOVA_SERVICE_NAME = "BoloSocket";
 
 Socket.State = {};
 Socket.State[Socket.State.CLOSED = 0] = "CLOSED";
@@ -49,7 +49,7 @@ Socket.prototype.open = function (host, port, success, error) {
                 _that.onError(payload.errorMessage);
                 break;
             default:
-                console.error("BoloSocekt: Unknown event type " + payload.type + ", socket key: " + payload.socketKey);
+                console.error("BoloSocket: Unknown event type " + payload.type + ", socket key: " + payload.socketKey);
                 break;
         }
     }
@@ -184,7 +184,7 @@ if (navigator.userAgent.match(/iemobile/i)) {
         exec(
             Socket.dispatchEvent,
             function (errorMessage) {
-                console.error("BoloSocekt: Cannot register WP event dispatcher, Error: " + errorMessage);
+                console.error("BoloSocket: Cannot register WP event dispatcher, Error: " + errorMessage);
             },
             CORDOVA_SERVICE_NAME,
             "registerWPEventDispatcher",

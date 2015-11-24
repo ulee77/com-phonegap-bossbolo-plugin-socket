@@ -5,7 +5,7 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         id="com-phonegap-bossbolo-plugin-socket"
         version="1.0.1">
-    <name>BoloSocekt</name>
+    <name>BoloSocket</name>
     <description>
 		socket通讯框架
 	</description>
@@ -25,8 +25,8 @@
     <!-- android -->
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
-            <feature name="BoloSocekt">
-                <param name="android-package" value="com.phonegap.bossbolo.plugin.socket.BoloSocekt"/>
+            <feature name="BoloSocket">
+                <param name="android-package" value="com.phonegap.bossbolo.plugin.socket.BoloSocket"/>
             </feature>
         </config-file>
 		<config-file target="AndroidManifest.xml" parent="/manifest">
@@ -37,7 +37,7 @@
 		<source-file src="src/android/SocketAdapter.java" target-dir="src/com/phonegap/bossbolo/plugin/socket" />
 		<source-file src="src/android/SocketAdapterImpl.java" target-dir="src/com/phonegap/bossbolo/plugin/socket" />
 		<source-file src="src/android/SocketAdapterOptions.java" target-dir="src/com/phonegap/bossbolo/plugin/socket" />
-		<source-file src="src/android/BoloSocekt.java" target-dir="src/com/phonegap/bossbolo/plugin/socket" />
+		<source-file src="src/android/BoloSocket.java" target-dir="src/com/phonegap/bossbolo/plugin/socket" />
 		<source-file src="src/android/MessageCodec.java" target-dir="src/com/phonegap/bossbolo/plugin/socket" />
 		<source-file src="src/android/MyZip.java" target-dir="src/com/phonegap/bossbolo/plugin/socket" />
 
@@ -46,8 +46,8 @@
     <!-- ios -->
     <platform name="ios">
         <config-file target="config.xml" parent="/*">
-            <feature name="BoloSocekt">
-                <param name="ios-package" value="BoloSocekt" />
+            <feature name="BoloSocket">
+                <param name="ios-package" value="BoloSocket" />
             </feature>
         </config-file>
 

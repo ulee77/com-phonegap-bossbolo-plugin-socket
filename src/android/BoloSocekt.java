@@ -19,7 +19,7 @@ import android.annotation.SuppressLint;
 
 import com.phonegap.bossbolo.plugin.CustomGlobal;
 
-public class SocketPlugin extends CordovaPlugin {
+public class BoloSocekt extends CordovaPlugin {
 	
 	Map<String, SocketAdapter> socketAdapters = new HashMap<String, SocketAdapter>(); 
 	private Timer timer = null;
@@ -41,7 +41,7 @@ public class SocketPlugin extends CordovaPlugin {
 		} else if (action.equals("setKeepAlive")) {
 			this.setKeepAlive(args, callbackContext);
 		} else{
-			callbackContext.error(String.format("SocketPlugin - invalid action:", action));
+			callbackContext.error(String.format("BoloSocekt - invalid action:", action));
 			return false;
 		}
 		return true;
@@ -300,9 +300,9 @@ public class SocketPlugin extends CordovaPlugin {
 		static Boolean connected = false;
 		private CordovaArgs args;
 		private CallbackContext callbackContext;
-		private SocketPlugin socket;
+		private BoloSocekt socket;
 	  
-		MyTask(CordovaArgs args, CallbackContext callbackContext, SocketPlugin socket){
+		MyTask(CordovaArgs args, CallbackContext callbackContext, BoloSocekt socket){
 			this.args = args;
 			this.callbackContext = callbackContext;
 			this.socket = socket;

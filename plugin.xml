@@ -63,8 +63,8 @@
         <header-file src="src/ios/MyZip.h" />
         <source-file src="src/ios/MyZip.m" />
 
-        <header-file src="src/ios/SocketPlugin.h" />
-	    <source-file src="src/ios/SocketPlugin.m" />
+        <header-file src="src/ios/BoloSocket.h" />
+	    <source-file src="src/ios/BoloSocket.m" />
 
         <header-file src="src/ios/SocketAdapter.h" />
         <source-file src="src/ios/SocketAdapter.m" />

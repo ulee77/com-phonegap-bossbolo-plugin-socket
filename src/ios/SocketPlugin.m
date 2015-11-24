@@ -1,13 +1,13 @@
-#import "SocketPlugin.h"
+#import "BoloSocket.h"
 #import "SocketAdapter.h"
 #import <cordova/CDV.h>
 #import <Foundation/Foundation.h>
 #import "MessageCodec.h"
 //#import "MessageBuffer.h"
-#import "AppDelegate.h"
+#import "BoloCustomGlobal.h"
 #import "Encryption.h"
 
-@implementation SocketPlugin : CDVPlugin
+@implementation BoloSocket : CDVPlugin
 
 - (void) open : (CDVInvokedUrlCommand*) command {
     
@@ -43,7 +43,7 @@
         [self dispatchEventWithDictionary:errorDictionaryData];
     };
     socketAdapter.dataConsumer = ^ void (NSArray* dataArray) {
-        AppDelegate *app = [[UIApplication sharedApplication] delegate];
+        BoloCustomGlobal *app = [BoloCustomGlobal getInstance];
         if([app.jsonData count]==0) {
             [MessageCodec decode:app.jsonData resData:dataArray];
             if([app.jsonData count]==0){

@@ -1,6 +1,6 @@
 #import <Cordova/CDV.h>
 
-@interface SocketPlugin : CDVPlugin {
+@interface BoloSocket : CDVPlugin {
     NSMutableDictionary *socketAdapters;
 }
 

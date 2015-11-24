@@ -43,7 +43,7 @@ Socket.prototype.open = function (host, port, success, error) {
                 _that.onClose(payload.hasError);
                 break;
             case "DataReceived":
-                _that.onData(payload.data);
+                _that.onData(JSON.parse(payload.data));
                 break;
             case "Error":
                 _that.onError(payload.errorMessage);

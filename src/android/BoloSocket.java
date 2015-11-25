@@ -19,7 +19,7 @@ import android.annotation.SuppressLint;
 
 import com.phonegap.bossbolo.plugin.CustomGlobal;
 
-public class BoloSocekt extends CordovaPlugin {
+public class BoloSocket extends CordovaPlugin {
 	
 	Map<String, SocketAdapter> socketAdapters = new HashMap<String, SocketAdapter>(); 
 	private Timer timer = null;
@@ -300,9 +300,9 @@ public class BoloSocekt extends CordovaPlugin {
 		static Boolean connected = false;
 		private CordovaArgs args;
 		private CallbackContext callbackContext;
-		private BoloSocekt socket;
+		private BoloSocket socket;
 	  
-		MyTask(CordovaArgs args, CallbackContext callbackContext, BoloSocekt socket){
+		MyTask(CordovaArgs args, CallbackContext callbackContext, BoloSocket socket){
 			this.args = args;
 			this.callbackContext = callbackContext;
 			this.socket = socket;
